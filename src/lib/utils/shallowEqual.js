@@ -37,7 +37,7 @@ function isEqual(val1, val2) {
 export default function shallowEqual(a, b) {
 	if (!a && !b) { return true; }
 	if (!a && b || a && !b) { return false; }
-
+    if (a===b) { return true; }
 	let numKeysA = 0, numKeysB = 0, key;
 	for (key in b) {
 		numKeysB++;
